@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Admission Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Online Admission Application Form</h1>
+            <p>Please fill out all required fields marked with <span class="required">*</span></p>
+        </header>
+
+        <form id="admissionForm" class="form-container">
+            <!-- Personal Information Section -->
+            <section class="form-section">
+                <h2>Personal Information</h2>
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender <span class="required">*</span></label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address <span class="required">*</span></label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City <span class="required">*</span></label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State/Province <span class="required">*</span></label>
+                        <input type="text" id="state" name="state" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zipCode">Zip/Postal Code <span class="required">*</span></label>
+                        <input type="text" id="zipCode" name="zipCode" required>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Educational Background Section -->
+            <section class="form-section">
+                <h2>Educational Background</h2>
+                
+                <div class="form-group">
+                    <label for="highSchool">High School Name <span class="required">*</span></label>
+                    <input type="text" id="highSchool" name="highSchool" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="hsGradYear">Graduation Year <span class="required">*</span></label>
+                        <input type="number" id="hsGradYear" name="hsGradYear" min="1990" max="2030" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gpa">GPA/Percentage <span class="required">*</span></label>
+                        <input type="number" id="gpa" name="gpa" min="0" max="100" step="0.01" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="stream">Academic Stream <span class="required">*</span></label>
+                    <select id="stream" name="stream" required>
+                        <option value="">Select Stream</option>
+                        <option value="science">Science</option>
+                        <option value="commerce">Commerce</option>
+                        <option value="arts">Arts</option>
+                        <option value="vocational">Vocational</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Program Selection Section -->
+            <section class="form-section">
+                <h2>Program Selection</h2>
+                
+                <div class="form-group">
+                    <label for="program">Desired Program <span class="required">*</span></label>
+                    <select id="program" name="program" required>
+                        <option value="">Select Program</option>
+                        <option value="btech">B.Tech (Engineering)</option>
+                        <option value="bsc">B.Sc (Science)</option>
+                        <option value="ba">B.A (Arts)</option>
+                        <option value="bcom">B.Com (Commerce)</option>
+                        <option value="bms">BMS (Management)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="specialization">Specialization/Branch</label>
+                    <select id="specialization" name="specialization">
+                        <option value="">Select Specialization (if applicable)</option>
+                        <option value="cse">Computer Science</option>
+                        <option value="ece">Electronics & Communication</option>
+                        <option value="civil">Civil Engineering</option>
+                        <option value="mech">Mechanical Engineering</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Additional Information Section -->
+            <section class="form-section">
+                <h2>Additional Information</h2>
+                
+                <div class="form-group">
+                    <label for="essay">Why do you want to join our institution? <span class="required">*</span></label>
+                    <textarea id="essay" name="essay" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="achievements">Achievements & Extracurricular Activities</label>
+                    <textarea id="achievements" name="achievements" rows="4" placeholder="List any awards, competitions, sports, clubs, etc."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="languages">Languages Known <span class="required">*</span></label>
+                    <input type="text" id="languages" name="languages" placeholder="e.g., English, Hindi, Spanish" required>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="citizenship" name="citizenship" required>
+                    <label for="citizenship">I am a citizen of this country <span class="required">*</span></label>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the terms and conditions <span class="required">*</span></label>
+                </div>
+            </section>
+
+            <!-- Form Actions -->
+            <div class="form-actions">
+                <button type="submit" class="btn btn-submit">Submit Application</button>
+                <button type="reset" class="btn btn-reset">Clear Form</button>
+            </div>
+        </form>
+
+        <footer>
+            <p>&copy; 2026 Digital Admission System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
